@@ -69,7 +69,7 @@
 	<body bgcolor="#080808">
 		<div class="parent">
 			<div class="item">
-				 <img style="float: left; margin: 10px;" src="murm-logo.png" height="110"> 
+				 <img style="float: left; margin: 10px;" src="murm-logo.png" height="110" id="gay"> 
 			</div>
 				<div class="item">
 					<p><font color="f3f3f3">im murm.</font></p>
@@ -79,7 +79,18 @@
 					<p><font color="f3f3f3">// </font><a href="mailto:murm@murm.gay"><font color="f3f3f3">mail</font></a></p>
 				</div>
 		</div>
+		<audio id="sfx" src="vineboom.wav" style="display: none" preload="auto"></audio>
 	</body>
+
+	<script>
+		window.addEventListener("DOMContentLoaded", event => {
+			document.getElementById("gay").addEventListener("click", () => {
+				const origAudio = document.getElementById("sfx");
+				const newAudio = origAudio.cloneNode()
+				newAudio.play();
+			});
+		});
+	</script>
 
 </html>
 
